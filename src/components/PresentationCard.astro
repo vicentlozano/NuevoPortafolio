@@ -1,0 +1,95 @@
+---
+import { Image } from "astro:assets";
+import Linkedin from "../components/icons/linkedin.astro";
+import Email2 from "../components/icons/email2.astro";
+import myself2 from "../img/myself2.jpg";
+---
+<article class="presentacion">
+    <section class="titulo-i-presentacion">
+        <section class="header-main">
+            <h1 class ="h1">Vicente Lozano Hervás</h1>
+            <h2 class ="h2">Soy un Desarrolador Web apasionado de la tecnología buscando  nuevos retos y oportunidades para aprender. </h2>
+        </section>
+    </section>
+    <section class ="footer-presentacion">
+        <a href="https://www.linkedin.com/in/vicente-lozano-herv%C3%A1s-0b1b3a1b9/" target="_blank" rel="noopener noreferrer" class= linkedin">
+        <Linkedin  alt="Github de Vicent Lozano"/>
+        </a>
+        
+        <a href="mailto:lozanodroid@gmail.com" class="email">
+        <Email2  alt="Email de Vicent Lozano"/>					
+        </a>
+    </section>
+    <div class="contenedor-imagen">
+        <Image src={myself2} alt = myself2 class = "myself2" />
+    </div>
+</article>
+
+<style>
+    .presentacion{
+        display:grid;
+        grid-template-columns: 70% 30%;
+        grid-template-rows: 70% 30%;
+        width: 90%;
+        height: 90%;
+        row-gap: 13px;
+    }    
+    .header-main{
+        text-align: start;
+        margin-top: 30px;
+        margin-left: 13px;
+        text-wrap: pretty;
+    }
+    .h1{
+        font-size:1.9rem;
+        font-weight: 700;
+        color: #176ed7;
+        margin:0px
+}
+    .h2{
+        font-size:1.5rem;
+        font-weight: 400;
+        color: #fff;
+    }
+    .contenedor-imagen{
+    grid-column: 2/3;
+    grid-row: 1/3;
+    justify-self: center; /* Centra el elemento a lo largo del eje de las columnas */
+    align-self: center; /* Centra el elemento a lo largo del eje de las filas */
+}    
+    .myself2{
+        width: 190px;
+        height: 190px;
+        border-radius: 50%;
+        
+      
+        
+    }
+    
+    .footer-presentacion{
+       display:grid;
+         grid-template-columns: 1fr 1fr;
+        gap:30px;
+        margin-left: 10px;
+        justify-self: start;
+        align-self:center;
+        grid-column:1;
+        grid-row:2/3;
+        margin-bottom: 30px;
+       
+        
+        
+    }        
+    a{
+        text-decoration: none;
+        width: 20px;
+        height: 20px;
+    }       
+    .email{ 
+    animation: tada 6s ease infinite;
+    animation-fill-mode: both;
+    transition: all .15s ease 0s;
+    }                       
+</style>
+
+	

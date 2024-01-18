@@ -34,7 +34,7 @@ const { title } = Astro.props;
 	}
 	html {
 		font-family: system-ui, sans-serif;
-		background: #13151a;
+		background: rgb(17, 17, 17, 1); 
 		background-size: 224px;
 	}
 	code {
@@ -48,4 +48,15 @@ const { title } = Astro.props;
 			Courier New,
 			monospace;
 	}
+	* {
+		box-sizing: border-box;
+	}
+	body{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		min-height: 100vh;
+		margin:0;
+	}
+	
 </style>
