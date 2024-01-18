@@ -1,24 +1,44 @@
----
-import ExperienceItem from "./ExperienceItem.astro"
-const EXPERIENCIE = [
-  {
-    date: "Actualmente...",
-    title: "Estudiante de Desarrollo de Aplicaciones Web − IES Jaume II el Just",
-    description:
-      "Compagino mis estudios en el ciclo de Desarrollo de Aplicaciones Web con el trabajo en Mañez y Lozano.",
-    
-  },
-  
-]
----
-
-<ol class="relative border-s border-gray-200 ml-3">
-  {
-    EXPERIENCIE.map((experiencie) => (
-      <li class="mb-10 ms-4">
-        <ExperienceItem {...experiencie} />
-      </li>
-    ))
+<article class="experience">
+  <ol class="relative border-s border-gray-200 dark:border-gray-700">                  
+    <li class="mb-10 ms-4">
+        <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+        <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Actualmente...</time>
+        <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Estudiante de Desarrollo de Aplicaciones Web − IES Jaume II el Just</h3>
+        <p class="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">Compagino mis estudios en el ciclo de Desarrollo de Aplicaciones Web con el trabajo en Mañez y Lozano.</p>
+    </li>
+    <li class="mb-10 ms-4">
+      <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+      <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Actualmente...</time>
+      <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Estudiante de Desarrollo de Aplicaciones Web − IES Jaume II el Just</h3>
+      <p class="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">Compagino mis estudios en el ciclo de Desarrollo de Aplicaciones Web con el trabajo en Mañez y Lozano.</p>
+  </li>
+  </ol>
+</article>
+<style>
+  .experience{
+    width:90%;
+    padding:10px;
+    overflow-y: auto; /* Añade scroll vertical */
+    max-height: 300px; /* Ajusta esto a la altura que prefieras */
   }
-</ol>
+  /* Estiliza la barra de desplazamiento */
+.experience::-webkit-scrollbar {
+  width: 0px; /* Oculta la barra de desplazamiento */
+}
 
+/* Muestra la barra de desplazamiento cuando se pasa el mouse */
+.experience:hover::-webkit-scrollbar {
+  width: 1px;
+}
+
+/* Estiliza el track (la barra de desplazamiento en sí) */
+.experience::-webkit-scrollbar-track {
+  background: #332f2f;
+}
+
+/* Estiliza el thumb (el control deslizante) */
+.experience::-webkit-scrollbar-thumb {
+  background: #c35308;
+}
+
+</style>
